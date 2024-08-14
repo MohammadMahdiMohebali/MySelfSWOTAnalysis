@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive SWOT Analysis - Dark Mode</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #1e1e1e;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            padding: 30px;
+            width: 90%;
+            max-width: 1200px;
+        }
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .swot-matrix {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .swot-quadrant {
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        .swot-quadrant:hover {
+            transform: scale(1.03);
+            box-shadow: 0 5px 15px rgba(255,255,255,0.1);
+        }
+        .swot-quadrant h2 {
+            margin-top: 0;
+            color: #ffffff;
+            font-size: 1.8em;
+            border-bottom: 2px solid;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .swot-quadrant ul {
+            padding-left: 20px;
+        }
+        .swot-quadrant li {
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        #strengths h2 { border-color: #4caf50; }
+        #weaknesses h2 { border-color: #f44336; }
+        #opportunities h2 { border-color: #2196f3; }
+        #threats h2 { border-color: #ff9800; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive SWOT Analysis</h1>
+        <div class="swot-matrix">
+            <div id="strengths" class="swot-quadrant">
+                <h2>Strengths</h2>
+                <ul>
+                    <li>Over a decade of versatile experience across software, e-retail, and video game industries</li>
+                    <li>Strong foundation in project management, product management, and data analysis</li>
+                    <li>Proven track record in crafting innovative strategies for business growth</li>
+                    <li>Expertise in data-driven decision making and performance marketing</li>
+                    <li>Proficiency in AI development, React Native app development, and Python programming</li>
+                    <li>Experience in leading cross-functional teams and delivering exceptional user experiences</li>
+                    <li>Strong background in UI/UX design principles</li>
+                </ul>
+            </div>
+            <div id="weaknesses" class="swot-quadrant">
+                <h2>Weaknesses</h2>
+                <ul>
+                    <li>Limited experience in some specific industries or niche markets</li>
+                    <li>Potential skill gaps in emerging technologies or specialized tools</li>
+                    <li>Geographic limitations in work history, primarily focused on Iran and Malaysia</li>
+                    <li>Possible need for adaptation to different business cultures in new markets</li>
+                    <li>Limited experience with large-scale, global enterprise projects</li>
+                    <li>Potential language barriers in non-English or non-Persian speaking markets</li>
+                </ul>
+            </div>
+            <div id="opportunities" class="swot-quadrant">
+                <h2>Opportunities</h2>
+                <ul>
+                    <li>Expanding expertise in AI and machine learning for product development</li>
+                    <li>Leveraging entrepreneurial experience to identify and pursue new business ventures</li>
+                    <li>Applying cross-industry knowledge to innovate in emerging markets</li>
+                    <li>Potential for international expansion, given diverse work experience</li>
+                    <li>Growing demand for data-driven product managers in various industries</li>
+                    <li>Opportunity to specialize in EdTech, given recent experience as Product Lead</li>
+                    <li>Possibility of mentoring or consulting based on diverse industry experience</li>
+                </ul>
+            </div>
+            <div id="threats" class="swot-quadrant">
+                <h2>Threats</h2>
+                <ul>
+                    <li>Rapidly evolving technology landscape requiring constant upskilling</li>
+                    <li>Increasing competition in the product management field</li>
+                    <li>Economic uncertainties affecting job market and industry growth</li>
+                    <li>Potential challenges in transitioning to new geographic markets</li>
+                    <li>Risk of skills becoming outdated in fast-changing tech environment</li>
+                    <li>Possible industry disruptions that could affect career trajectory</li>
+                    <li>Increasing demand for specialized knowledge in niche areas</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.swot-quadrant').forEach(quadrant => {
+            quadrant.addEventListener('mouseover', () => {
+                quadrant.style.backgroundColor = getDarkerColor(quadrant.id);
+            });
+            quadrant.addEventListener('mouseout', () => {
+                quadrant.style.backgroundColor = '#2a2a2a';
+            });
+        });
+
+        function getDarkerColor(id) {
+            switch(id) {
+                case 'strengths': return '#1b3d1b';
+                case 'weaknesses': return '#3d1b1b';
+                case 'opportunities': return '#1b1b3d';
+                case 'threats': return '#3d2e1b';
+            }
+        }
+    </script>
+</body>
+</html>

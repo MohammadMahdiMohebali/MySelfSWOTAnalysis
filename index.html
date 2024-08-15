@@ -20,15 +20,15 @@
             background-color: #1e1e1e;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            padding: 30px;
+            padding: 20px;
             width: 90%;
             max-width: 1200px;
         }
         h1 {
             text-align: center;
             color: #ffffff;
-            margin-bottom: 30px;
-            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-size: 2em;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         .swot-matrix {
@@ -49,22 +49,51 @@
         .swot-quadrant h2 {
             margin-top: 0;
             color: #ffffff;
-            font-size: 1.8em;
+            font-size: 1.5em;
             border-bottom: 2px solid;
             padding-bottom: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         .swot-quadrant ul {
             padding-left: 20px;
         }
         .swot-quadrant li {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             line-height: 1.4;
+            font-size: 0.9em;
         }
         #strengths h2 { border-color: #4caf50; }
         #weaknesses h2 { border-color: #f44336; }
         #opportunities h2 { border-color: #2196f3; }
         #threats h2 { border-color: #ff9800; }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            .swot-matrix {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            .swot-quadrant h2 {
+                font-size: 1.3em;
+            }
+            .swot-quadrant li {
+                font-size: 0.85em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            .swot-quadrant h2 {
+                font-size: 1.2em;
+            }
+            .swot-quadrant {
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 <body>
